@@ -13,4 +13,8 @@ class Category extends Model
     protected $guarded = [
         'id'
     ];
+
+    public function franchise(){
+        return $this->hasMany(Franchise::class);
+    }
 }

@@ -14,7 +14,7 @@ class FranchiseController extends Controller
      */
     public function index()
     {
-        $franchises = Franchise::all();
+        $franchises = Franchise::with('category')->get();
         return view('admin.franchise.index', compact('franchises'));
     }
 

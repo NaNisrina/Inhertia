@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Franchise;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,9 +13,11 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function franchise()
+    public function franchise(Request $request)
     {
-        return view('franchise');
+        $categories = Category::with('franchise')->get();
+
+        return view('franchise', compact('categories'));
     }
 
     // public function auth ()
