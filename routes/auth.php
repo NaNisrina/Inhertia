@@ -37,7 +37,7 @@ Route::post('/login', function(Request $request){
     }
 })->name('auth.authenticate');
 
-Route::post('/logout', function(){
+Route::get('/logout', function(){
     Auth::logout();
     return view("auth.login");
 })->name('auth.logout');

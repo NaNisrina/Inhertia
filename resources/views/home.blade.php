@@ -4,19 +4,17 @@
 @section('content')
 
     <!-- slider section -->
-    <section class="slider_section ">
+    <section class="slider_section">
         <div class="container ">
             <div class="row">
                 <div class="col-lg-7 col-md-8 mx-auto">
                     <div class="detail-box">
                         <h1>
-                            Build Your <br>
-                            POWERFUL CAREER
+                            INHERTIA <br>
+                            FRANCHISE
                         </h1>
                         <p>
-                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-                            normal
-                            distribution of letters, as opposed to
+                            Look for a franchise you love the most
                         </p>
                     </div>
                 </div>
@@ -25,13 +23,19 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
+
                             <form>
                                 <div class="form-row ">
-                                    <div class="form-group col-lg-3">
-                                        <input type="text" class="form-control" id="inputPatientName"
-                                            placeholder="Keywords">
+
+                                    <div class="form-group col-lg-9">
+                                        <input type="text" class="form-control" name="search" id="search"
+                                            placeholder="Search..." aria-label="search">
+
+                                        {{-- <input type="text" class="form-control" id="inputPatientName"
+                                            placeholder="Keywords"> --}}
                                     </div>
-                                    <div class="form-group col-lg-3">
+
+                                    {{-- <div class="form-group col-lg-3">
                                         <select name="" class="form-control wide" id="inputDoctorName">
                                             <option value="Normal distribution ">All Locations</option>
                                             <option value="Normal distribution ">Location 2 </option>
@@ -46,17 +50,22 @@
                                             <option value="Normal distribution ">Graphic Deesigner</option>
                                             <option value="Normal distribution ">Content Writer</option>
                                         </select>
-                                    </div>
+                                    </div> --}}
+
                                     <div class="form-group col-lg-3">
                                         <div class="btn-box">
-                                            <button type="submit" class="btn ">Submit Now</button>
+                                            <button type="submit" class="btn ">
+                                                <i class="fa fa-search mr-2" aria-hidden="true"></i>
+                                                Search
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    <ul class="job_check_list">
+
+                    {{-- <ul class="job_check_list">
                         <li class=" ">
                             <input id="checkbox_qu_01" type="checkbox" class="styled-checkbox">
                             <label for="checkbox_qu_01">
@@ -75,17 +84,23 @@
                                 Full Time
                             </label>
                         </li>
-                    </ul>
+                    </ul> --}}
+
                 </div>
             </div>
         </div>
     </section>
     <!-- end slider section -->
     </div>
+
     <!-- category section -->
-    <section class="category_section">
-        <div class="container-fluid">
+    <section class="category_section category_body">
+        <div class="container">
+
+            <h3 class="text-white pt-3">CATEGORY</h3>
+
             <div class="row">
+
                 <div class="col-sm-6 col-md-4 col-xl-2 px-0">
                     <a href="#" class="box">
                         <div class="img-box">
@@ -98,6 +113,7 @@
                         </div>
                     </a>
                 </div>
+
                 <div class="col-sm-6 col-md-4 col-xl-2 px-0">
                     <a href="#" class="box">
                         <div class="img-box">
@@ -163,301 +179,56 @@
     </section>
     <!-- end category section -->
 
-    <!-- job section -->
-    <section class="job_section layout_padding">
+    <!-- Carousel -->
+    <div class="bg-dark py-5">
         <div class="container">
-            <div class="heading_container heading_center">
-                <h2>
-                    RECENT & FEATURED JOBS
-                </h2>
-            </div>
-            <div class="job_container">
-                <h4 class="job_heading">
-                    Featured Jobs
-                </h4>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="box">
-                            <div class="job_content-box">
-                                <div class="img-box">
-                                    <img src="images/job_logo1.png" alt="">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Development Team Lead
-                                    </h5>
-                                    <div class="detail-info">
-                                        <h6>
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <span>
-                                                Washington. D.C.
-                                            </span>
-                                        </h6>
-                                        <h6>
-                                            <i class="fa fa-money" aria-hidden="true"></i>
-                                            <span>
-                                                $1200 - $1300
-                                            </span>
-                                        </h6>
-                                    </div>
-                                </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="/images/j1.jpg" class="d-block w-100" alt="...">
                             </div>
-                            <div class="option-box">
-                                <button class="fav-btn">
-                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                </button>
-                                <a href="" class="apply-btn">
-                                    Apply Now
-                                </a>
+                            <div class="col-6">
+                                <img src="/images/j2.jpg" class="d-block w-100" alt="...">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="box">
-                            <div class="job_content-box">
-                                <div class="img-box">
-                                    <img src="images/job_logo2.png" alt="">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Make my website responsive device compatible
-                                    </h5>
-                                    <div class="detail-info">
-                                        <h6>
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <span>
-                                                New York
-                                            </span>
-                                        </h6>
-                                        <h6>
-                                            <i class="fa fa-money" aria-hidden="true"></i>
-                                            <span>
-                                                $200 - $340
-                                            </span>
-                                        </h6>
-                                    </div>
-                                </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="/images/j2.jpg" class="d-block w-100" alt="...">
                             </div>
-                            <div class="option-box">
-                                <button class="fav-btn">
-                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                </button>
-                                <a href="" class="apply-btn">
-                                    Apply Now
-                                </a>
+                            <div class="col-6">
+                                <img src="/images/j3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="/images/j3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="col-6">
+                                <img src="/images/j4.jpg" class="d-block w-100" alt="...">
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="job_container">
-                <h4 class="job_heading">
-                    Recent Jobs
-                </h4>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="box">
-                            <div class="job_content-box">
-                                <div class="img-box">
-                                    <img src="images/job_logo3.png" alt="">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Looking Graphic Designer (Logo + UI)
-                                    </h5>
-                                    <div class="detail-info">
-                                        <h6>
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <span>
-                                                Washington. D.C.
-                                            </span>
-                                        </h6>
-                                        <h6>
-                                            <i class="fa fa-money" aria-hidden="true"></i>
-                                            <span>
-                                                $1200/mo
-                                            </span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="option-box">
-                                <button class="fav-btn">
-                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                </button>
-                                <a href="" class="apply-btn">
-                                    Apply Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="box">
-                            <div class="job_content-box">
-                                <div class="img-box">
-                                    <img src="images/job_logo6.png" alt="">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Are you Typography Expert?
-                                    </h5>
-                                    <div class="detail-info">
-                                        <h6>
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <span>
-                                                New York
-                                            </span>
-                                        </h6>
-                                        <h6>
-                                            <i class="fa fa-money" aria-hidden="true"></i>
-                                            <span>
-                                                $56 - $90
-                                            </span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="option-box">
-                                <button class="fav-btn">
-                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                </button>
-                                <a href="" class="apply-btn">
-                                    Apply Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="box">
-                            <div class="job_content-box">
-                                <div class="img-box">
-                                    <img src="images/job_logo5.png" alt="">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Looking WordPress Developer for ThemeForest
-                                    </h5>
-                                    <div class="detail-info">
-                                        <h6>
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <span>
-                                                Washington. D.C.
-                                            </span>
-                                        </h6>
-                                        <h6>
-                                            <i class="fa fa-money" aria-hidden="true"></i>
-                                            <span>
-                                                $400 - $540
-                                            </span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="option-box">
-                                <button class="fav-btn">
-                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                </button>
-                                <a href="" class="apply-btn">
-                                    Apply Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="box">
-                            <div class="job_content-box">
-                                <div class="img-box">
-                                    <img src="images/job_logo4.png" alt="">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Hiring Web Designer for Project
-                                    </h5>
-                                    <div class="detail-info">
-                                        <h6>
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <span>
-                                                Washington. D.C.
-                                            </span>
-                                        </h6>
-                                        <h6>
-                                            <i class="fa fa-money" aria-hidden="true"></i>
-                                            <span>
-                                                $350 - $450
-                                            </span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="option-box">
-                                <button class="fav-btn">
-                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                </button>
-                                <a href="" class="apply-btn">
-                                    Apply Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="btn-box">
-                <a href="">
-                    View All
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
                 </a>
             </div>
-        </div>
-    </section>
-    <!-- end job section -->
-
-    <!-- Carousel -->
-    <div class="container my-5">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="/images/j1.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="col-6">
-                            <img src="/images/j2.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="/images/j2.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="col-6">
-                            <img src="/images/j3.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="/images/j3.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="col-6">
-                            <img src="/images/j4.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </div>
     <!-- /Carousel -->

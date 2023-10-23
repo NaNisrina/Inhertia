@@ -10,4 +10,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function franchise()
+    {
+        return view('franchise');
+    }
+
+    // public function auth ()
+    // {
+    //     return view('auth.login');
+    // }
 }

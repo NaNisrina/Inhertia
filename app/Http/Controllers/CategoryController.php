@@ -71,6 +71,7 @@ class CategoryController extends Controller
 
     public function category()
     {
-        return view('category');
+        $categories = Category::all();
+        return view('category', compact('categories'));
     }
 }

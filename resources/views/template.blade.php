@@ -12,7 +12,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Hirevac</title>
+    <title>Inhertia - @yield('title')</title>
 
 
     <!-- bootstrap core css -->
@@ -34,22 +34,24 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet" />
-    
+
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/template.css">
 
 </head>
 
 <body>
 
-    <div class="hero_area">
+    <div class="bg-dark">
         <!-- header section strats -->
         <header class="header_section">
-            <div class="container-fluid">
+            <div class="container">
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{{ route('home') }}">
                         <span>
-                            Hirevac
+                            Inhertia
                         </span>
                     </a>
 
@@ -61,13 +63,23 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ml-auto">
+
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link" href="{{ route('home') }}">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('category') }}">Category</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="category">category</a>
+                                <a class="nav-link" href="{{ route('franchise') }}">franchise</a>
                             </li>
+
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('auth.login') }}">Admin</a>
+                            </li>
+
+                            {{-- <li class="nav-item">
                                 <a class="nav-link" href="job.html">Jobs</a>
                             </li>
                             <li class="nav-item">
@@ -88,12 +100,14 @@
                                         Sign Up
                                     </span>
                                 </a>
-                            </li>
-                            <form class="form-inline">
+                            </li> --}}
+
+                            {{-- <form class="form-inline">
                                 <button class="btn   nav_search-btn" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
-                            </form>
+                            </form> --}}
+
                         </ul>
                     </div>
                 </nav>
@@ -104,11 +118,11 @@
         @yield('content')
 
         <!-- footer section -->
-        <footer class="footer_section">
+        <footer class="footer_section bg-dark">
             <div class="container">
                 <p>
                     &copy; <span id="displayYear"></span> All Rights Reserved By
-                    <a href="https://html.design/">Free Html Templates</a>
+                    <a href="https://html.design/">Inhertia</a>
                 </p>
             </div>
         </footer>
