@@ -21,8 +21,12 @@
     <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
 
+    {{-- font awesome --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <!-- font awesome style -->
     <link href="css/font-awesome.min.css" rel="stylesheet" />
+
     <!-- nice select -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
@@ -30,6 +34,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet" />
+    
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
 
