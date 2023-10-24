@@ -9,7 +9,7 @@
                             <form>
                                 <div class="form-row "> --}}
 
-            {{-- <div class="form-group col-lg-9">
+                            {{-- <div class="form-group col-lg-9">
                                         <input type="text" class="form-control" name="search" id="search"
                                             placeholder="Search..." aria-label="search">
                                     </div>
@@ -24,9 +24,9 @@
                                         </div>
                                     </div> --}}
 
-            {{-- <input type="text" class="form-control" id="inputPatientName"
+                            {{-- <input type="text" class="form-control" id="inputPatientName"
                                         placeholder="Keywords"> --}}
-            {{-- <div class="form-group col-lg-3">
+                            {{-- <div class="form-group col-lg-3">
                                         <select name="" class="form-control wide" id="inputDoctorName">
                                             <option value="Normal distribution ">All Locations</option>
                                             <option value="Normal distribution ">Location 2 </option>
@@ -44,13 +44,13 @@
                                     </div> --}}
 
 
-            {{-- </div>
+                            {{-- </div>
                             </form>
 
                         </div>
                     </div> --}}
 
-            {{-- <ul class="job_check_list">
+                            {{-- <ul class="job_check_list">
                         <li class=" ">
                             <input id="checkbox_qu_01" type="checkbox" class="styled-checkbox">
                             <label for="checkbox_qu_01">
@@ -71,12 +71,12 @@
                         </li>
                     </ul> --}}
 
-            {{-- </div>
+                            {{-- </div>
             </div> --}}
 
-            {{-- </div> --}}
+                            {{-- </div> --}}
 
-    {{-- <!-- category section -->
+                            {{-- <!-- category section -->
     <section class="category_section category_body">
         <div class="container">
 
@@ -162,7 +162,7 @@
     </section>
     <!-- end category section --> --}}
 
-    {{-- <div class="carousel-inner">
+                            {{-- <div class="carousel-inner">
 
                     @foreach ($franchises as $franchise)
                     <div class="carousel-item active border-dark rounded">
@@ -176,7 +176,7 @@
 
                 </div> --}}
 
-                                            {{-- <div class="col-6">
+                            {{-- <div class="col-6">
                                 <img src="/images/j2.jpg" class="d-block w-100" alt="...">
                             </div> --}}
 
@@ -201,7 +201,7 @@
                         </div>
                     </div> --}}
 
-                                            {{-- @foreach ($categories as $category)
+                            {{-- @foreach ($categories as $category)
                             <div class="job_container">
                             <h4 class="job_heading">
                                 {{ $category->name }}
@@ -228,7 +228,7 @@
                     @endforeach --}}
 
 
-            {{-- <div class="col-3 mt-4 mr-3 ml-3 bg-warning border rounded">
+                            {{-- <div class="col-3 mt-4 mr-3 ml-3 bg-warning border rounded">
             <a href="#" class="box">
                 <div class="icon">
                     <i class="fa-solid fa-plug fa-lg text-danger"></i>
@@ -361,7 +361,7 @@
             </a>
         </div> --}}
 
-              {{-- <div class="find_container ">
+                            {{-- <div class="find_container ">
         <div class="container">
           <div class="row">
             <div class="col">
@@ -389,3 +389,27 @@
           </div>
         </div>
       </div> --}}
+
+                            {{-- <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const searchInput = document.getElementById("search");
+                const categoryContainers = document.querySelectorAll(".col-3");
+
+                searchInput.addEventListener("input", function () {
+                    const searchTerm = searchInput.value.toLowerCase();
+
+                    categoryContainers.forEach(function (container) {
+                        const h5category = container.querySelector("h5");
+
+                        // Validate existing data
+                        const hasH5category = h5category && h5category.textContent;
+
+                        if (hasH5category && h5category.textContent.toLowerCase().includes(searchTerm)) {
+                            container.classList.remove("hidden");
+                        } else {
+                            container.classList.add("hidden");
+                        }
+                    });
+                });
+            });
+        </script> --}}
