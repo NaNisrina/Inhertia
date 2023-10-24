@@ -9,30 +9,47 @@
                 PILIH KATEGORI
             </h2>
         </div>
+
+        <!-- Search -->
         <input type="text" class="form-control" name="search" id="search" placeholder="Search..." aria-label="search">
 
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
+            document.addEventListener("DOMContentLoaded", function () {
                 const searchInput = document.getElementById("search");
-                const noteContainers = document.querySelectorAll(".category-container");
+                const categoryContainers = document.querySelectorAll(".col-3");
 
-                searchInput.addEventListener("input", function() {
+                searchInput.addEventListener("input", function () {
                     const searchTerm = searchInput.value.toLowerCase();
 
-                    categoryContainers.forEach(function(container) {
-                        const h1category = container.querySelector("#category-icon");
-                        const h5category = container.querySelector("#category-name");
+                    categoryContainers.forEach(function (container) {
+                        const categoryText = container.querySelector("h5").textContent.toLowerCase();
 
-                        // Validate exisiting data
-                        const hasH1category = h1category && h1category.textContent;
+                        if (categoryText.includes(searchTerm)) {
+                            container.style.display = "block"; // Show matching categories
+                        } else {
+                            container.style.display = "none";  // Hide non-matching categories
+                        }
+                    });
+                });
+            });
+        </script>
+
+
+        {{-- <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const searchInput = document.getElementById("search");
+                const categoryContainers = document.querySelectorAll(".col-3");
+
+                searchInput.addEventListener("input", function () {
+                    const searchTerm = searchInput.value.toLowerCase();
+
+                    categoryContainers.forEach(function (container) {
+                        const h5category = container.querySelector("h5");
+
+                        // Validate existing data
                         const hasH5category = h5category && h5category.textContent;
 
-                        if (
-                            (hasH1category && h1category.textContent.toLowerCase().includes(
-                            searchTerm)) ||
-                            (hasH5category && h5category.textContent.toLowerCase().includes(
-                            searchTerm)) ||
-                        ) {
+                        if (hasH5category && h5category.textContent.toLowerCase().includes(searchTerm)) {
                             container.classList.remove("hidden");
                         } else {
                             container.classList.add("hidden");
@@ -40,7 +57,8 @@
                     });
                 });
             });
-        </script>
+        </script> --}}
+
     </div>
 
     <div class="container text-center py-5">
@@ -61,138 +79,6 @@
                 </div>
             @endforeach
 
-            {{-- <div class="col-3 mt-4 mr-3 ml-3 bg-warning border rounded">
-            <a href="#" class="box">
-                <div class="icon">
-                    <i class="fa-solid fa-plug fa-lg text-danger"></i>
-                </div>
-                <div class="detail-box text-danger">
-                    <h5>
-                        ELEKTRONIK
-                    </h5>
-                </div>
-            </a>
-        </div>
-        <div class="col-3 mt-4 ml-3 bg-warning border rounded">
-            <a href="#" class="box">
-                <div class="icon">
-                    <i class="fa-solid fa-broom fa-lg text-danger"></i>
-                </div>
-                <div class="detail-box text-danger">
-                    <h5>
-                        RUMAH TANGGA
-                    </h5>
-                </div>
-            </a>
-        </div>
-        <div class="col-3 mt-4 mr-3 bg-warning border rounded">
-            <a href="#" class="box">
-                <div class="icon">
-                    <i class="fa-solid fa-bowl-food fa-lg text-danger"></i>
-                </div>
-                <div class="detail-box text-danger">
-                    <h5>
-                        MAKANAN
-                    </h5>
-                </div>
-            </a>
-        </div>
-        <div class="col-3 mt-4 mr-3 ml-3 bg-warning border rounded">
-            <a href="#" class="box">
-                <div class="icon">
-                    <i class="fa-solid fa-mug-hot fa-lg text-danger"></i>
-                </div>
-                <div class="detail-box text-danger">
-                    <h5>
-                        MINUMAN
-                    </h5>
-                </div>
-            </a>
-        </div>
-        <div class="col-3 mt-4 ml-3 bg-warning border rounded">
-            <a href="#" class="box">
-                <div class="icon">
-                    <i class="fa-solid fa-shirt fa-lg text-danger"></i>
-                </div>
-                <div class="detail-box text-danger">
-                    <h5>
-                        PAKAIAN
-                    </h5>
-                </div>
-            </a>
-        </div>
-        <div class="col-3 mt-4 mr-3 bg-warning border rounded">
-            <a href="#" class="box">
-                <div class="icon">
-                    <i class="fa-solid fa-store fa-lg text-danger"></i>
-                </div>
-                <div class="detail-box text-danger">
-                    <h5>
-                        MINIMARKET
-                    </h5>
-                </div>
-            </a>
-        </div>
-        <div class="col-3 mt-4 mr-3 ml-3 bg-warning border rounded">
-            <a href="#" class="box">
-                <div class="icon">
-                    <i class="fa-solid fa-scissors fa-lg text-danger"></i>
-                </div>
-                <div class="detail-box text-danger">
-                    <h5>
-                        SALON
-                    </h5>
-                </div>
-            </a>
-        </div>
-        <div class="col-3 mt-4 ml-3 bg-warning border rounded">
-            <a href="#" class="box">
-                <div class="icon">
-                    <i class="fa-solid fa-dumbbell fa-lg text-danger"></i>
-                </div>
-                <div class="detail-box text-danger">
-                    <h5>
-                        GYM
-                    </h5>
-                </div>
-            </a>
-        </div>
-        <div class="col-3 mt-4 mr-3 bg-warning border rounded">
-            <a href="#" class="box">
-                <div class="icon">
-                    <i class="fa-solid fa-jug-detergent fa-lg text-danger"></i>
-                </div>
-                <div class="detail-box text-danger">
-                    <h5>
-                        LAUNDRY
-                    </h5>
-                </div>
-            </a>
-        </div>
-        <div class="col-3 mt-4 mr-3 ml-3 bg-warning border rounded">
-            <a href="#" class="box">
-                <div class="icon">
-                    <i class="fa-solid fa-keyboard fa-lg text-danger"></i>
-                </div>
-                <div class="detail-box text-danger">
-                    <h5>
-                        AKSESORIS GADGET
-                    </h5>
-                </div>
-            </a>
-        </div>
-        <div class="col-3 mt-4 ml-3 bg-warning border rounded">
-            <a href="#" class="box">
-                <div class="icon">
-                    <i class="fa-solid fa-car fa-lg text-danger"></i>
-                </div>
-                <div class="detail-box text-danger">
-                    <h5>
-                        BENGKEL
-                    </h5>
-                </div>
-            </a>
-        </div> --}}
         </div>
     </div>
     </div>

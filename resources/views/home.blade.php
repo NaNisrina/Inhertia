@@ -19,32 +19,7 @@
           </div>
         </div>
       </div>
-      <div class="find_container ">
-        <div class="container">
-          <div class="row">
-            <div class="col">
 
-              <form action="{{ route('franchise') }}">
-                <div class="form-row ">
-
-                  <div class="form-group col-lg-9">
-                    <input type="text" class="form-control" name="search" id="search" placeholder="Search..."
-                      aria-label="search">
-                  </div>
-                  <div class="form-group col-lg-3">
-                    <div class="btn-box">
-                      <button type="submit" class="btn ">
-                        <i class="fa fa-search mr-2" aria-hidden="true"></i>
-                        Search
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
   <!-- end slider section -->
@@ -79,19 +54,22 @@
   <!-- Carousel -->
   <div class="bg-dark py-5">
     <div class="container">
+
       <h3 class="text-white pt-3">BEST FRANCHISE</h3>
+
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
         <div class="carousel-inner">
           @foreach ($datas as $data)
             @if (count($data) == 2)
               <div class="carousel-item {{ $loop->iteration == 1 ? 'active' : '' }}">
                 <div class="row">
                   @if (isset($data[1]))
-                    <div class="col-6">
-                      <img src="{{ $data[0]['image'] }}" class="d-block w-100" alt="...">
+                    <div class="col-6" style="max-height: 666px;">
+                      <img src="{{ $data[0]['image'] }}" class="img_carousel" alt="...">
                     </div>
-                    <div class="col-6">
-                      <img src="{{ $data[1]['image'] }}" class="d-block w-100" alt="...">
+                    <div class="col-6" style="max-height: 666px;">
+                      <img src="{{ $data[1]['image'] }}" class="img_carousel" alt="...">
                     </div>
                   @endif
                 </div>
@@ -99,6 +77,7 @@
             @endif
           @endforeach
         </div>
+
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
@@ -107,7 +86,9 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
+
       </div>
+
     </div>
   </div>
   <!-- /Carousel -->

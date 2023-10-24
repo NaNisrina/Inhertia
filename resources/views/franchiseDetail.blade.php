@@ -11,7 +11,7 @@
                 <div class="card shadow">
                     <div class="card-body text-dark">
                         <h3 class="text-center">{{ $franchise->name }}</h3>
-                        <img src="{{ asset($franchise->image) }}" class="d-block mx-auto mb-4">
+                        <img src="{{ asset($franchise->image) }}" class="d-block mx-auto mb-4 w-100">
                         <div class="row">
                             <div class="col-12">
                                 <h6 class="m-0">Nama Perusahaan</h6>

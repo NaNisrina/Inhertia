@@ -5,11 +5,49 @@
   <!-- job section -->
   <section class="job_section layout_padding category_body">
     <div class="container">
+
       <div class="heading_container heading_center">
         <h2>
           RECENT & FEATURED JOBS
         </h2>
       </div>
+
+      <!-- Search -->
+      <input type="text" class="form-control" name="search" id="search" placeholder="Search..." aria-label="search">
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("search");
+            const franchiseContainers = document.querySelectorAll(".job_container");
+
+            searchInput.addEventListener("input", function () {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                franchiseContainers.forEach(function (container) {
+                    const categoryText = container.querySelector(".job_heading").textContent.toLowerCase();
+                    const franchiseBoxes = container.querySelectorAll(".box");
+
+                    let hasMatchingFranchise = false;
+
+                    franchiseBoxes.forEach(function (box) {
+                        const franchiseName = box.querySelector("h5").textContent.toLowerCase();
+
+                        if (franchiseName.includes(searchTerm)) {
+                            box.style.display = "block"; // Show matching franchises
+                            hasMatchingFranchise = true;
+                        } else {
+                            box.style.display = "none"; // Hide non-matching franchises
+                        }
+                    });
+
+                    // If there's a matching franchise in this category, show the category heading
+                    container.style.display = hasMatchingFranchise ? "block" : "none";
+                });
+            });
+        });
+    </script>
+
+
       @foreach ($categories as $category)
         @if (count($category->franchise) > 0 || $search)
           <div class="job_container">
