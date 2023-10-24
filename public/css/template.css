@@ -1,10 +1,21 @@
-/* body {
-    background-color: #0C0C0C;
-} */
+body {
+    background-color: #343A40;
+}
+.inhertia {
+    background-color: #E41A2B;
+    border-radius: 100%;
+}
 .category_body {
     background-color: #E41A2B;
 }
 .category_card {
     background-color: #ff0000;
     text-decoration: none;
+}
+.img_carousel {
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    background-size: cover;
 }

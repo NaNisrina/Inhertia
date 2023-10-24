@@ -83,22 +83,20 @@
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           @foreach ($datas as $data)
-            <div class="carousel-item {{ $loop->iteration == 1 ? 'active' : '' }}">
-              <div class="row">
-                @if (isset($data[1]))
-                  <div class="col-6">
-                    <img src="{{ $data[0]['image'] }}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="col-6">
-                    <img src="{{ $data[1]['image'] }}" class="d-block w-100" alt="...">
-                  </div>
-                @else
-                  <div class="col-12">
-                    <img src="{{ $data[0]['image'] }}" class="d-block w-100" alt="...">
-                  </div>
-                @endif
+            @if (count($data) == 2)
+              <div class="carousel-item {{ $loop->iteration == 1 ? 'active' : '' }}">
+                <div class="row">
+                  @if (isset($data[1]))
+                    <div class="col-6">
+                      <img src="{{ $data[0]['image'] }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="col-6">
+                      <img src="{{ $data[1]['image'] }}" class="d-block w-100" alt="...">
+                    </div>
+                  @endif
+                </div>
               </div>
-            </div>
+            @endif
           @endforeach
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
