@@ -2,6 +2,7 @@
 @section('title', 'Franchise')
 
 @section('content')
+
     <!-- job section -->
     <section class="job_section layout_padding bg-dark">
         <div class="container">
@@ -53,53 +54,78 @@
             @foreach ($categories as $category)
                 @if (count($category->franchise) > 0 || $search)
                     <div class="job_container">
+
                         <h4 class="job_heading">
                             {{ $category->name }}
                         </h4>
+
                         <div class="row">
+
                             @foreach ($category->franchise as $franchise)
                                 <div class="col-lg-6">
-                                    <div class="box bg-light text-primary shadow">
+                                    <div class="box bg-light text-danger shadow">
 
                                         <div class="job_content-box">
 
-                                            <div class="img-box">
+                                            <div class="align-middle">
                                                 <img src="{{ $franchise->image }}" alt="" class="img_detail"
-                                                    style="max-height: 100px">
+                                                    style="max-height: 150px">
                                             </div>
 
-                                            <div class="detail-box">
+                                            <div class="ml-3 detail-box" style="overflow: auto;">
 
-                                                <h5>
+                                                <h5 class="h2">
                                                     {{ $franchise->name }}
                                                 </h5>
 
                                                 <div class="detail-info">
-
-                                                    <h6>
-                                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    <h6 class="mb-2">
+                                                        <i class="h6 fa-solid fa-location-dot" aria-hidden="true"></i>
                                                         <span>
                                                             {{ $franchise->alamat }}
                                                         </span>
                                                     </h6>
+                                                </div>
 
+                                                <div class="detail-info">
+                                                    <h6 class="mb-2">
+                                                        <i class="h6 fa-solid fa-dollar-sign" aria-hidden="true"></i>
+                                                        <span>
+                                                            {{ number_format($franchise->modal_minimal) }}
+                                                        </span>
+                                                    </h6>
+                                                </div>
+
+                                                <div class="detail-info">
+                                                    <h6 class="mb-2">
+                                                        <i class="h6 fa-solid fa-envelope" aria-hidden="true"></i>
+                                                        <span>
+                                                            {{ $franchise->email }}
+                                                        </span>
+                                                    </h6>
+                                                </div>
+
+                                                <div class="detail-info">
+                                                    <h6 class="mb-2">
+                                                        <i class="h6 fa-solid fa-phone" aria-hidden="true"></i>
+                                                        <span>
+                                                            {{ $franchise->telepon }}
+                                                        </span>
+                                                    </h6>
                                                 </div>
 
                                             </div>
                                         </div>
 
-                                        <div class="option-box">
-                                            {{-- <button class="fav-btn">
-                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                        </button> --}}
-                                            <a href="{{ route('franchise.detail', $franchise->slug) }}"
-                                                class="btn btn-outline-primary">
-                                                Detail &raquo;
-                                            </a>
-                                        </div>
+                                        <a href="{{ route('franchise.detail', $franchise->slug) }}"
+                                            class="btn btn-outline-danger mt-3">
+                                            Detail &raquo;
+                                        </a>
+
                                     </div>
                                 </div>
                             @endforeach
+
                         </div>
                     </div>
                 @endif

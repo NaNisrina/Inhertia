@@ -3,11 +3,12 @@
 
 @section('content')
 
+    <!-- category -->
     <section class="layout_padding bg-dark">
-
         <div class="container">
+
             <div class="heading_container heading_center text-light">
-                <h2 class="my-3">
+                <h2 class="mb-3">
                     CATEGORY
                 </h2>
             </div>

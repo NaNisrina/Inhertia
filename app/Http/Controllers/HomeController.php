@@ -16,19 +16,23 @@ class HomeController extends Controller
         $datas = [];
         for ($i = 1; $i <= count($franchises) ; $i++) {
             if ($i % 2 == 1) {
-                $datas[floor($i / 3)] = [
+                $datas[floor($i / 2)] = [
                     [
                         'image' => $franchises[$i - 1]->image,
                         'slug' => $franchises[$i - 1]->slug,
                     ]
                 ];
             } else {
-                $datas[floor($i / 3)][1] = [
+                $datas[floor($i / 2)][1] = [
                     'image' => $franchises[$i - 1]->image,
                     'slug' => $franchises[$i - 1]->slug,
                 ];
             }
+            // var_dump(floor($i / 2));
+            // echo "<br>";
         }
+
+        // dd($datas, $franchises);
 
         return view('home', compact('categories', 'datas'));
     }

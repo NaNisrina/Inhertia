@@ -413,3 +413,7 @@
                 });
             });
         </script> --}}
+
+        {{-- <button class="fav-btn">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                        </button> --}}

@@ -14,15 +14,15 @@ body {
 }
 .img_carousel {
     background-position: center;
-    width: 350px;
-    height: 350px;
+    width: 500px ;
+    height: 500px ;
     object-fit: cover;
     background-size: cover;
 }
 .img_detail {
     background-position: center;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     background-size: cover;
 }

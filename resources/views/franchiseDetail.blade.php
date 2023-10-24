@@ -31,7 +31,7 @@
                                     <p><span class="text-muted">Rp.{{ number_format($franchise->modal_minimal) }}</span></p>
                                 </div>
                             </div>
-                            <a href="{{ route('franchise') }}" class="btn btn-secondary mb-3">Back</a>
+                            <a href="{{ route('franchise') }}" class="btn btn-danger mb-3">Back</a>
                         </div>
                     </div>
                 </div>
