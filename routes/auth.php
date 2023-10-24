@@ -36,8 +36,3 @@ Route::post('/login', function(Request $request){
         return redirect()->route('auth.login')->with('message', 'Username atau Password Salah');
     }
 })->name('auth.authenticate');
-
-Route::get('/logout', function(){
-    Auth::logout();
-    return view("auth.login");
-})->name('auth.logout');

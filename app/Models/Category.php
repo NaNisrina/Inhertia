@@ -17,4 +17,8 @@ class Category extends Model
     public function franchise(){
         return $this->hasMany(Franchise::class);
     }
+
+    public function franchiseLimit(){
+        return $this->hasMany(Franchise::class)->limit(4);
+    }
 }

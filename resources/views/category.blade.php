@@ -17,9 +17,9 @@
         @foreach ($categories as $category)
 
         <div class="col-3 mt-4 mr-3 bg-warning border rounded">
-            <a href="#" class="box">
+            <a href="{{ route('franchise', ['category' => $category->slug]) }}" class="box">
                 <div class="icon h1 pt-3">
-                    <i class="fa-solid fa-list fa-lg text-danger"></i>
+                    <i class="{{ $category->icon }} fa-lg text-danger"></i>
                 </div>
                 <div class="detail-box text-danger">
                     <h5>

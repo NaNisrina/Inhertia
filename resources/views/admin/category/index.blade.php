@@ -5,9 +5,14 @@
   <form action="{{ route('category.store') }}" method="POST">
     @csrf
     <div class="row">
-      <div class="col-10">
+      <div class="col-5">
         <div class="form-group">
           <input type="text" name="name" placeholder="Category Name" id="" class="form-control">
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="form-group">
+          <input type="text" name="icon" placeholder="Category Icon" id="" class="form-control">
         </div>
       </div>
       <div class="col-2">
@@ -18,7 +23,9 @@
   <table class="table table-bordered">
     <thead>
       <th>No</th>
-      <th>Nama Kategori</th>
+      <th>Nama</th>
+      <th>Slug</th>
+      <th>Icon</th>
       <th>Action</th>
     </thead>
     <tbody>
@@ -26,6 +33,8 @@
         <tr>
           <td>{{ $loop->iteration }}</td>
           <td>{{ $category->name }}</td>
+          <td>{{ $category->slug }}</td>
+          <td>{{ $category->icon }}</td>
           <td  class="d-flex">
             <form action="{{ route('category.destroy', $category->id) }}" onsubmit="confirm('Yakin Ingin Menghapus Data Ini?')" method="post">
               @csrf

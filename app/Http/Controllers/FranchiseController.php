@@ -44,12 +44,22 @@ class FranchiseController extends Controller
         $name = Str::random(20) . "." . $request->file('file')->getClientOriginalExtension();
         $request->file('file')->move(public_path($path), $name);
 
+
+        $slug = strtolower($request->name);
+        $slug = str_replace(" ", '-', $slug);
+
         Franchise::create([
             'category_id' => $request->category,
             'name' => $request->name,
             'link' => $request->link,
             'description' => $request->description,
             'image' => $path . $name,
+            'slug' => $slug,
+            'name_perusahaan' => $request->name_perusahaan,
+            'modal_minimal' => $request->modal_minimal,
+            'alamat' => $request->alamat,
+            'email' => $request->email,
+            'telepon' => $request->telepon,
         ]);
 
         return redirect()->route('franchise.index');
@@ -85,6 +95,9 @@ class FranchiseController extends Controller
             'category' => 'required',
         ]);
 
+        $slug = strtolower($request->name);
+        $slug = str_replace(" ", '-', $slug);
+
         if ($request->hasFile('file')) {
             $path = 'images/franchise/';
             $name = Str::random(20) . "." . $request->file('file')->getClientOriginalExtension();
@@ -96,6 +109,12 @@ class FranchiseController extends Controller
                 'link' => $request->link,
                 'description' => $request->description,
                 'image' => $path . $name,
+                'slug' => $slug,
+                'name_perusahaan' => $request->name_perusahaan,
+                'modal_minimal' => $request->modal_minimal,
+                'alamat' => $request->alamat,
+                'email' => $request->email,
+                'telepon' => $request->telepon,
             ]);
         } else {
             $franchise->update([
@@ -103,6 +122,12 @@ class FranchiseController extends Controller
                 'name' => $request->name,
                 'link' => $request->link,
                 'description' => $request->description,
+                'slug' => $slug,
+                'name_perusahaan' => $request->name_perusahaan,
+                'modal_minimal' => $request->modal_minimal,
+                'alamat' => $request->alamat,
+                'email' => $request->email,
+                'telepon' => $request->telepon,
             ]);
         }
 

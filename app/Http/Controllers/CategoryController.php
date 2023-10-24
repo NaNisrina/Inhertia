@@ -22,12 +22,17 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'  => 'required'
+            'name'  => 'required',
+            'icon'  => 'required',
         ]);
 
+        $slug = strtolower($request->name);
+        $slug = str_replace(" ", '-', $slug);
 
         Category::create([
-            'name' => $request->name
+            'name' => $request->name,
+            'slug' => $slug,
+            'icon' => $request->icon,
         ]);
 
 

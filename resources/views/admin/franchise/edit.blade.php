@@ -31,6 +31,26 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <label for="link" class="form-label">Nama Perusahaan Franchise</label>
+                        <input value="{{ $franchise->name_perusahaan }}" id="link" type="text" class="form-control" name="name_perusahaan" placeholder="Nama Perusahaan Franchise" >
+                    </div>
+                    <div class="form-group">
+                        <label for="link" class="form-label">Alamat Franchise</label>
+                        <input value="{{ $franchise->alamat }}" id="link" type="text" class="form-control" name="alamat" placeholder="Alamat Franchise" >
+                    </div>
+                    <div class="form-group">
+                        <label for="link" class="form-label">Telepon Franchise</label>
+                        <input value="{{ $franchise->telepon }}" id="link" type="text" class="form-control" name="telepon" placeholder="No Telepon Franchise" >
+                    </div>
+                    <div class="form-group">
+                        <label for="link" class="form-label">Email Franchise</label>
+                        <input value="{{ $franchise->email }}" id="link" type="email" class="form-control" name="email" placeholder="Email Franchise" >
+                    </div>
+                    <div class="form-group">
+                        <label for="link" class="form-label">Modal Minimal</label>
+                        <input value="{{ $franchise->modal_minimal }}" id="link" type="number" class="form-control" name="modal_minimal" placeholder="Modal Minimal" >
+                    </div>
+                    <div class="form-group">
                         <label for="description" class="form-label">Photo Franchise</label>
                         <input id="photo" type="file" class="form-control" name="file" placeholder="Nama Franchise" >
                     </div>

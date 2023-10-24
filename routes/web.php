@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/franchise', [HomeController::class, 'franchise'])->name('franchise');
+Route::get('/franchise/{slug}', [HomeController::class, 'franchiseDetail'])->name('franchise.detail');
 
 Route::get('category', [CategoryController::class, 'category'])->name('category');
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('/logout', function(){
+    Auth::logout();
+    return view("auth.login");
+})->name('auth.logout');
