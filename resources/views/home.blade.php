@@ -38,7 +38,7 @@
     </div>
 
     <!-- category section -->
-    <section class="category_section">
+    <section class="category_section mb-3">
         <div class="container">
 
             <h3 class="text-white">CATEGORY</h3>
@@ -64,17 +64,16 @@
     </section>
     <!-- end category section -->
 
-    <!-- Carousel -->
+    {{-- <!-- Carousel -->
     <div class="bg-dark py-5">
         <div class="container">
 
-            <h3 class="text-white pt-3">BEST FRANCHISE</h3>
+            {{-- <h3 class="text-white pt-3">BEST FRANCHISE lah</h3> --}}
 
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            {{-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
                 <div class="carousel-inner">
                     @foreach ($datas as $data)
-                        @if (count($data) == 2)
                             <div class="carousel-item {{ $loop->iteration == 1 ? 'active' : '' }} text-center">
                                 <div class="row">
                                     @if (isset($data[1]))
@@ -87,7 +86,6 @@
                                     @endif
                                 </div>
                             </div>
-                        @endif
                     @endforeach
                 </div>
 
@@ -100,10 +98,10 @@
                     <span class="sr-only">Next</span>
                 </a>
 
-            </div>
+            </div> --}}
 
         </div>
     </div>
-    <!-- /Carousel -->
+    <!-- /Carousel --> --}}
 
 @endsection

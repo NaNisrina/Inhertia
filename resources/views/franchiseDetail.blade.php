@@ -35,9 +35,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-8">
+                <div class="col-8" >
                     <div class="card shadow">
-                        <div class="card-body text-dark">
+                        <div class="card-body text-dark"  style="box-sizing: content-box;">
                             {!! $franchise->description !!}
                         </div>
                     </div>

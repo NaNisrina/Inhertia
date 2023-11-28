@@ -63,7 +63,16 @@
 
                             @foreach ($category->franchise as $franchise)
                                 <div class="col-lg-6">
-                                    <div class="box bg-light text-danger shadow">
+
+                                    <div class="box border-light bg-light text-danger shadow">
+
+                                        {{-- <div class="row">
+                                            <div class="col-12 text-right">
+                                                <i class="fas fa-window-minimize mr-2"></i>
+                                                <i class="fas fa-window-restore mr-2"></i>
+                                                <i class="fas fa-close"></i>
+                                            </div>
+                                        </div> --}}
 
                                         <div class="job_content-box">
 
@@ -72,15 +81,15 @@
                                                     style="max-height: 150px">
                                             </div>
 
-                                            <div class="ml-3 detail-box" style="overflow: auto;">
+                                            <div class="ml-3 detail-box">
 
-                                                <h5 class="h2">
+                                                <h5 class="h3 mb-5">
                                                     {{ $franchise->name }}
                                                 </h5>
 
                                                 <div class="detail-info">
-                                                    <h6 class="mb-2">
-                                                        <i class="h6 fa-solid fa-location-dot" aria-hidden="true"></i>
+                                                    <h6 class="mb-1">
+                                                        <i class="h6 fa-solid fa-location-dot mr-1" aria-hidden="true"></i>
                                                         <span>
                                                             {{ $franchise->alamat }}
                                                         </span>
@@ -88,31 +97,31 @@
                                                 </div>
 
                                                 <div class="detail-info">
-                                                    <h6 class="mb-2">
-                                                        <i class="h6 fa-solid fa-dollar-sign" aria-hidden="true"></i>
+                                                    <h6 class="mb-1">
+                                                        <i class="h6 fa-solid fa-dollar-sign mr-2" aria-hidden="true"></i>
                                                         <span>
                                                             {{ number_format($franchise->modal_minimal) }}
                                                         </span>
                                                     </h6>
                                                 </div>
 
-                                                <div class="detail-info">
-                                                    <h6 class="mb-2">
+                                                {{-- <div class="detail-info">
+                                                    <h6 class="mb-1">
                                                         <i class="h6 fa-solid fa-envelope" aria-hidden="true"></i>
                                                         <span>
                                                             {{ $franchise->email }}
                                                         </span>
                                                     </h6>
-                                                </div>
+                                                </div> --}}
 
-                                                <div class="detail-info">
-                                                    <h6 class="mb-2">
+                                                {{-- <div class="detail-info">
+                                                    <h6 class="mb-1">
                                                         <i class="h6 fa-solid fa-phone" aria-hidden="true"></i>
                                                         <span>
                                                             {{ $franchise->telepon }}
                                                         </span>
                                                     </h6>
-                                                </div>
+                                                </div> --}}
 
                                             </div>
                                         </div>

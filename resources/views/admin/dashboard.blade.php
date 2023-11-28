@@ -2,5 +2,5 @@
 @section('title', 'Dashboard')
 @section('content-title', 'Dashboard')
 @section('content')
-    <h1>Hello World</h1>
+    <a href="/">Back to Home</a>
 @endsection

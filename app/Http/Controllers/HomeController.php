@@ -15,7 +15,7 @@ class HomeController extends Controller
 
         $datas = [];
         for ($i = 1; $i <= count($franchises) ; $i++) {
-            if ($i % 2 == 1) {
+            if ($i % 2 == 0) {
                 $datas[floor($i / 2)] = [
                     [
                         'image' => $franchises[$i - 1]->image,
